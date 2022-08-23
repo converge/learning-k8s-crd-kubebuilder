@@ -1,0 +1,20 @@
+# permissions for end users to view k1installers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: k1installer-viewer-role
+rules:
+- apiGroups:
+  - k1-installer.jplab.cloud
+  resources:
+  - k1installers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - k1-installer.jplab.cloud
+  resources:
+  - k1installers/status
+  verbs:
+  - get

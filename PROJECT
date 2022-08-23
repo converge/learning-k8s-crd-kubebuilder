@@ -1,0 +1,16 @@
+domain: jplab.cloud
+layout:
+- go.kubebuilder.io/v4-alpha
+projectName: my-crd
+repo: k1-installer-demo
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: jplab.cloud
+  group: k1-installer
+  kind: K1Installer
+  path: k1-installer-demo/api/v1
+  version: v1
+version: "3"

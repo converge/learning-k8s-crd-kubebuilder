@@ -1,0 +1,6 @@
+apiVersion: k1-installer.jplab.cloud/v1
+kind: K1Installer
+metadata:
+  name: k1installer-data
+spec:
+  color: yellow

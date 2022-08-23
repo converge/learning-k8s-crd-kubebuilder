@@ -1,0 +1,24 @@
+# permissions for end users to edit k1installers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: k1installer-editor-role
+rules:
+- apiGroups:
+  - k1-installer.jplab.cloud
+  resources:
+  - k1installers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - k1-installer.jplab.cloud
+  resources:
+  - k1installers/status
+  verbs:
+  - get
